@@ -21,13 +21,13 @@ This is the minimum required to get the Google services running.
 To build Android into the Rpi, I have followed this guide provided by the Rpi website:
 [https://www.raspberrypi.org/documentation/installation/installing-images/linux.md]
 
--Run lsblk -p to see which devices are currently connected to your machine.
--Check the SD card name (should be something like sdbX) X should be replaced by a letter depending on how many usb periphericals are plugged in
--If any partitions on the SD card have been mounted, unmount them all with umount, for example umount /dev/sdX1 (replace sdX1 with your SD card's device name, and change the number for any other partitions).
--Then run the following command
+- Run lsblk -p to see which devices are currently connected to your machine.
+- Check the SD card name (should be something like sdbX) X should be replaced by a letter depending on how many usb periphericals are plugged in
+- If any partitions on the SD card have been mounted, unmount them all with umount, for example umount /dev/sdX1 (replace sdX1 with your SD card's device name, and change the number for any other partitions).
+- Then run the following command
 	dd bs=4M if=**lineage-16.0-20200212-UNOFFICIAL-KonstaKANG-rpi4.zip** of=/dev/**sdX** status=progress conv=sync
 	(Replace the emphized part by the path to your .img file and the name of your SD Card)
-- 
+
 
 I have followed this video in my attempt to OC the Rpi
 [https://www.youtube.com/watch?v=TwDbQ26_Mp8]
